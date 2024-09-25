@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+input {
+  padding: 10px;
+  width: 220px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #0072ff;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+.info-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0; /* Initially hidden for animation */
+  transform: translateY(-10px); /* Start position for animation */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animation properties */
+}
+
+.info-box.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
+}
